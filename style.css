@@ -1,0 +1,14 @@
+* {
+    box-sizing: border-box;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(16, 30px);
+}
+
+.container div {
+    border: 1px solid black;
+    height: 30px;
+}
+
