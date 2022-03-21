@@ -14,3 +14,10 @@ const cells = document.querySelectorAll('.cell');
 cells.forEach(cell => cell.addEventListener('mouseover', () => {
     cell.style.backgroundColor = 'green';
 }));
+
+const button = document.querySelector('button');
+button.addEventListener('click', () => {
+    cells.forEach(cell => {
+        cell.style.backgroundColor = 'white';
+    });
+});

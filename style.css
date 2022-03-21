@@ -2,6 +2,10 @@
     box-sizing: border-box;
 }
 
+button {
+    margin-bottom: 20px;
+}
+
 .container {
     display: grid;
     grid-template-columns: repeat(16, 30px);
