@@ -8,6 +8,7 @@ button {
 
 .container {
     width: 750px;
+    margin: auto;
     display: grid;
 }
 
