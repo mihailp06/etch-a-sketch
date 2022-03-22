@@ -9,7 +9,6 @@ button {
 .container {
     width: 750px;
     display: grid;
-    grid-template-columns: repeat(16, 1fr);
 }
 
 .container div {

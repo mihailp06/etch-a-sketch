@@ -1,23 +1,23 @@
 const container = document.querySelector('.container');
 
 function createGrid(cells) {
-    for (let i = 0; i < cells; i++) {
+    container.style.gridTemplateColumns = `repeat(${cells}, 1fr)`;
+    container.style.gridTemplateRows = `repeat(${cells}, 1fr)`;
+    for (let i = 0; i < cells *  cells; i++) {
         const div = document.createElement('div');
-        div.classList.add('cell');
+        div.addEventListener('mouseover', () => {
+            div.style.backgroundColor = 'green';
+        })
         container.appendChild(div);
     }
 }
 
-createGrid(256);
+createGrid(16);
 
-const cells = document.querySelectorAll('.cell');
-cells.forEach(cell => cell.addEventListener('mouseover', () => {
-    cell.style.backgroundColor = 'green';
-}));
 
 const button = document.querySelector('button');
 button.addEventListener('click', () => {
-    cells.forEach(cell => {
-        cell.style.backgroundColor = 'white';
-    });
+    container.innerHTML = '';
+    let userInput = parseInt(prompt('Number of squares:'));
+    createGrid(userInput);
 });
